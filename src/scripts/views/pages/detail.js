@@ -74,9 +74,9 @@ const Detail = {
         alert('Review berhasil di post');
         setTimeout(() => {
           location.reload(true);
-          ReviewContainer.innerHTML = createReviewTemplate(resto);
         }, 1);
       }
+      ReviewContainer.innerHTML = createReviewTemplate(resto);
     });
   },
 };

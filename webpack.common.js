@@ -42,6 +42,12 @@ module.exports = {
     }),
     new WorkboxWebpackPlugin.GenerateSW({
       swDest: './sw.bundle.js',
+      runtimeCaching: [
+        {
+          urlPattern: /^https:\/\/restaurant-api\.dicoding\.dev\/(?:(detail))/,
+          handler: 'NetworkFirst',
+        },
+      ],
     }),
   ],
 };
