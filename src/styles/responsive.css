@@ -1,0 +1,78 @@
+@media screen and (min-width: 580px) {
+  #resto-list {
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: 2rem;
+    gap: 2rem;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  main {
+    margin-top: 0;
+  }
+
+  #mainContent {
+    height: 100%;
+    padding-top: 2.5rem;
+  }
+
+  .container {
+    padding: 1rem 4rem;
+  }
+
+  .hero h1 {
+    font-size: 5rem;
+  }
+
+  .hero span {
+    font-size: 1.5rem;
+  }
+
+  .appBar {
+    display: none;
+  }
+
+  #regNav {
+    display: block;
+    position: fixed;
+  }
+
+  #offsetNav {
+    display: none;
+  }
+
+  #resto-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  #resto-detail {
+    margin-top: 3%;
+  }
+
+  .resto-main-info {
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    column-gap: 3rem;
+    padding: 1.5rem;
+    margin: 0 5rem;
+  }
+
+  .resto-main-info h3 {
+    font-size: 4rem;
+  }
+
+  .resto-main-info span {
+    font-size: 1.5rem;
+  }
+
+  .review {
+    width: 50%;
+    margin: 1.5rem 0;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .hero {
+    min-width: 1000px;
+  }
+}
