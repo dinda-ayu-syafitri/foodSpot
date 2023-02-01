@@ -57,19 +57,21 @@ const createLikedButtonTemplate = () => `
 `;
 
 const createReviewTemplate = (resto) => `
+${resto.customerReviews
+    .map((review) => `
+      <div class="review">
+      <img src="/images/person-circle.png" alt="" />
+      <div class="review-content">
+      <h5>${review.name}</h5>
+      <span>${review.date}</span>
+      <p>${review.review}</p>
+      </div>
+      </div>
+      <hr>
+    </div>
+`)
+    .join(' ')}
 
-          ${resto.customerReviews.reduce((show, review) => show.concat(`
-          <div class="review">
-          <img src="/images/person-circle.png" alt="" />
-          <div class="review-content">
-          <h5>${review.name}</h5>
-          <span>${review.date}</span>
-          <p>${review.review}</p>
-          </div>
-          </div>
-          <hr>
-        </div>
-          `), '')}
 `;
 
 export {

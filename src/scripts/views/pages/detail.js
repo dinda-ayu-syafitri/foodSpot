@@ -56,7 +56,7 @@ const Detail = {
     const reviewName = document.querySelector('#nameReview');
     const reviewText = document.querySelector('#textReview');
 
-    reviewSubmitBtn.addEventListener('click', (e) => {
+    reviewSubmitBtn.addEventListener('click', async (e) => {
       e.preventDefault();
       if (reviewName.value === '' || reviewText.value === '') {
         alert('Isi semua input!');
@@ -68,15 +68,13 @@ const Detail = {
           name: reviewName.value,
           review: reviewText.value,
         };
-        DicodingRestoSrc.addCustomerReview(review);
+        const reviewUpdate = await DicodingRestoSrc.addCustomerReview(review);
         reviewName.value = '';
         reviewText.value = '';
         alert('Review berhasil di post');
-        setTimeout(() => {
-          location.reload(true);
-        }, 1);
+        console.log(reviewUpdate);
+        ReviewContainer.innerHTML = createReviewTemplate(reviewUpdate);
       }
-      ReviewContainer.innerHTML = createReviewTemplate(resto);
     });
   },
 };
