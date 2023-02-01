@@ -9,10 +9,12 @@ const Detail = {
           <article class="container">
           <h2>Detail Restoran</h2>
           <div id="resto-detail" class="resto-detail"></div>
-          <h4>Customer Review</h3>
           <div class="review-container" id="review-container">
-</div>
+          <h4>Customer Review</h4>
+          </div>
           <div id="resto-review">
+          <h4>Add Review</h4>
+          <div id="addReviewStatus"></div>
 <form action="">
   <div class="form-review-name">
     <label for="nameReview">Nama</label>
@@ -38,7 +40,7 @@ const Detail = {
     const DetailContainer = document.querySelector('#resto-detail');
     const ReviewContainer = document.querySelector('#review-container');
     DetailContainer.innerHTML = createRestoDetailTemplate(resto);
-    ReviewContainer.innerHTML = createReviewTemplate(resto);
+    ReviewContainer.innerHTML += createReviewTemplate(resto);
 
     LikeButtonInitiator.init({
       likeButtonContainer: document.querySelector('#likeButtonContainer'),
@@ -55,11 +57,13 @@ const Detail = {
     const reviewSubmitBtn = document.querySelector('#submitBtn');
     const reviewName = document.querySelector('#nameReview');
     const reviewText = document.querySelector('#textReview');
+    const addReviewStatus = document.querySelector('#addReviewStatus');
 
     reviewSubmitBtn.addEventListener('click', async (e) => {
       e.preventDefault();
       if (reviewName.value === '' || reviewText.value === '') {
-        alert('Isi semua input!');
+        // alert('Isi semua input!');
+        addReviewStatus.innerHTML = '<span>Isi semua input!</span>';
         reviewName.value = '';
         reviewText.value = '';
       } else {
@@ -71,7 +75,8 @@ const Detail = {
         const reviewUpdate = await DicodingRestoSrc.addCustomerReview(review);
         reviewName.value = '';
         reviewText.value = '';
-        alert('Review berhasil di post');
+        // alert('Review berhasil di post');
+        addReviewStatus.innerHTML = '<span>Review berhasil di post!</span>';
         console.log(reviewUpdate);
         ReviewContainer.innerHTML = createReviewTemplate(reviewUpdate);
       }

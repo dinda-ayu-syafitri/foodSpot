@@ -10,6 +10,7 @@
 a {
   color: inherit;
   text-decoration: none;
+  padding: 22px 0;
 }
 
 html,
@@ -141,7 +142,13 @@ h5 {
   height: 44px;
   min-width: 44px;
   min-height: 44px;
+  background-color: transparent;
+  border: none;
+}
+
+#nav-icon i {
   color: #fff;
+  font-size: 3rem;
 }
 
 .brand {
@@ -225,7 +232,7 @@ h2 {
   font-size: 1.75rem;
 }
 
-.resto-detail h4 {
+h4 {
   font-size: 1.25rem;
 }
 
@@ -242,8 +249,20 @@ h2 {
   list-style-position: inside;
 }
 
-.resto-review {
-  display: grid;
+.review-container {
+  margin: 1rem 0;
+}
+
+#resto-review h4 {
+  margin: 1rem 0;
+}
+#addReviewStatus {
+  margin: 1rem 0;
+}
+
+#addReviewStatus span {
+  color: #e8745d;
+  font-size: 1rem;
 }
 
 label {
@@ -253,6 +272,7 @@ label {
 input[type="text"],
 textarea {
   width: 100%;
+  min-height: 44px;
   padding: 12px 20px;
   margin: 8px 0;
   display: inline-block;
