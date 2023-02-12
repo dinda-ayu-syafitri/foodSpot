@@ -1,7 +1,7 @@
 import UrlParser from '../../routes/url-parser';
 import DicodingRestoSrc from '../../data/dicoding_resto_src';
 import { createRestoDetailTemplate, createReviewTemplate } from '../templates/template-creator';
-import LikeButtonInitiator from '../../utils/like-button-initiator';
+import LikeButtonInitator from '../../utils/like-button-presenter.js';
 
 const Detail = {
   async render() {
@@ -42,7 +42,7 @@ const Detail = {
     DetailContainer.innerHTML = createRestoDetailTemplate(resto);
     ReviewContainer.innerHTML += createReviewTemplate(resto);
 
-    LikeButtonInitiator.init({
+    LikeButtonInitator.init({
       likeButtonContainer: document.querySelector('#likeButtonContainer'),
       resto: {
         id: resto.id,

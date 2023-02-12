@@ -1,5 +1,6 @@
 @media screen and (min-width: 580px) {
-  #resto-list {
+  #resto-list,
+  .resto-list {
     grid-template-columns: repeat(2, 1fr);
     margin-top: 2rem;
     gap: 2rem;
@@ -41,7 +42,8 @@
     display: none;
   }
 
-  #resto-list {
+  #resto-list,
+  .resto-list {
     grid-template-columns: repeat(3, 1fr);
   }
 

@@ -186,7 +186,8 @@ main {
 }
 
 /* Restaurant List */
-#resto-list {
+#resto-list,
+.resto-list {
   margin-top: 10%;
   display: grid;
   grid-template-columns: 1fr;
@@ -194,7 +195,8 @@ main {
 }
 
 /* Restaurant Card */
-#resto-list section {
+#resto-list section,
+.resto-list section {
   background: #fcfcfc;
   box-shadow: 5px 5px 60px #bebebe, -5px -5px 60px #ffffff;
   border-radius: 1rem;
@@ -361,6 +363,10 @@ button[type="submit"]:hover {
   font-size: 18px;
   color: white;
   cursor: pointer;
+}
+
+.search {
+  margin-top: 3rem;
 }
 
 /* Footer */
