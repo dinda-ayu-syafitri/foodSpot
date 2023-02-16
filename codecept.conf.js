@@ -20,5 +20,13 @@ exports.config = {
   include: {
     I: './steps_file.js'
   },
-  name: 'katalog_restoran'
+  name: 'katalog_restoran',
+  plugins: {
+    retryFailedStep: {
+      enabled: true,
+    },
+    screenshotOnFail: {
+      enabled: true,
+    },
+  },
 }

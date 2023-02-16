@@ -36,7 +36,7 @@ const createRestoDetailTemplate = (resto) => `
 
 const createRestoItemTemplate = (resto) => `
 <section class='resto-item'>
-<img src="${CONFIG.BASE_IMAGE_URL + resto.pictureId}" alt="Foto ${resto.name}" class="card-img"/>
+<img class="lazyload card-img" data-src="${CONFIG.BASE_IMAGE_URL + resto.pictureId}" src="${CONFIG.BASE_IMAGE_URL + resto.pictureId}" alt="Foto ${resto.name}"/>
 <h3 class='resto__title'><a href='/#/detail/${resto.id}'>${resto.name || '-'}</a></h3>
 <i class="fa-solid fa-location-dot"></i><span>${resto.city}</span><br />
 <i class="fa-solid fa-star"></i><span>${resto.rating}</span>

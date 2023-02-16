@@ -21,6 +21,13 @@
     padding: 1rem 4rem;
   }
 
+  .hero-bg img {
+    width: 100%;
+    object-fit: cover;
+    background-position: center;
+    max-height: 90vh;
+  }
+
   .hero h1 {
     font-size: 5rem;
   }
